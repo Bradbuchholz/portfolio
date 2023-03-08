@@ -9,12 +9,14 @@ import Certificates from './components/Certificates';
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
-      <About />
-      <Certificates />
-      <Projects />
-      <Skills />
-      <Contact />
+      <main className='text-gray-400 bg-gray-900 body-font'>
+        <Navbar />
+        <About />
+        <Certificates />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
     </React.Fragment>
   );
 }
