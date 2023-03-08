@@ -1,6 +1,6 @@
 import React from "react";
 // import { MagnifyingGlassCircleIcon } from '@heroicons/react/solid';
-import { projects } from '../data'; 
+import { projects } from "../Data";
 
 function Projects() {
   return (
