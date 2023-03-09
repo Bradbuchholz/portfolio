@@ -8,7 +8,7 @@ import Certificates from './components/Certificates';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <main className='text-gray-400 bg-gray-900 body-font'>
         <Navbar />
         <About />
@@ -17,7 +17,7 @@ function App() {
         <Skills />
         <Contact />
       </main>
-    </React.Fragment>
+    </>
   );
 }
 
