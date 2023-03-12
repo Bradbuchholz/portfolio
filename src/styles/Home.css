@@ -28,14 +28,14 @@
   width: 40%;
   font-size: 30px;
 }
-.prompt svg {
+/* .prompt svg {
   font-size: 60px;
   margin: 5px;
   color: white;
-}
+} */
 
 .skills {
-  font-size: 35px;
+  font-size: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -53,10 +53,10 @@
 }
 
 .list span {
-  font-size: 20px;
+  font-size: 15px;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .about h2 {
     font-size: 40px;
   }
@@ -77,4 +77,4 @@
   .skills h2 {
     font-size: 30px;
   }
-}
+} */

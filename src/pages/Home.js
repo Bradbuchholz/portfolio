@@ -10,7 +10,7 @@ function Home() {
       <div className='about'>
         <h2>Hi, my name is Brad Buchholz</h2>
         <div className='prompt'>
-          <p>I'm a software developer that loves to learn and create!</p>
+          <p>I have a passion for building user interfaces and creating web applications that are both functional and visually appealing.</p>
           <LinkedInIcon />
           <EmailIcon />
           <GithubIcon />
@@ -21,14 +21,14 @@ function Home() {
           <li className="item">
             <h2> Front-End</h2>
             <span>
-              ReactJS, Redux, HTML, CSS, NPM,
+              JavaScript, ReactJS, Redux, HTML, CSS, NPM,
               BootStrap, MaterialUI
             </span>
           </li>
           <li className="item">
             <h2>Back-End</h2>
             <span>
-              NodeJS, Java Spring, .NET, MySQL
+              NodeJS, C#, .NET, MySQL
             </span>
           </li>
           <li className="item">
