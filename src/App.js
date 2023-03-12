@@ -1,23 +1,27 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Certificates from './components/Certificates';
+import React, { Component } from 'react';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ProjectDisplay from "./pages/ProjectDisplay";
 
 function App() {
   return (
-    <>
-      <main className='text-gray-400 bg-gray-900 body-font'>
+    <div className="App">
+      <Router>
         <Navbar />
-        <About />
-        <Certificates />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-    </>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<ProjectDisplay />} /> */}
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
