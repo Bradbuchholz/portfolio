@@ -1,34 +1,33 @@
-import React from "react";
-import { ArrowRightIcon } from "@heroicons/react/solid";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import ReorderIcon from "@material-ui/icons/Reorder";
 
-function Navbar(){
+function Navbar() {
+  const [expandNavbar, setExpandNavbar] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
+
   return (
-    <header className="bg-gray-800 md:sticky top-0 z-10">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#about" className="ml-3 text-xl">
-            Brad Buchholz
-          </a>
-        </a>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-          <a href="#projects" className="mr-5 hover:text-white">
-            Past Work
-          </a>
-          <a href="#skills" className="mr-5 hover:text-white">
-            Skills
-          </a>
-          <a href="#testimonials" className="mr-5 hover:text-white">
-            Testimonials
-          </a>
-        </nav>
-        <a
-          href="#contact"
-          className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-          Hire Me
-          <ArrowRightIcon className="w-1 h-1 ml-1" />
-        </a>
+    <div className="navbar" id={expandNavbar ? 'open' : 'close'}>
+      <div className='toggleButton'>
+        <button
+          onClick={() => {
+            setExpandNavbar((prev) => !prev);
+          }}
+          >
+            <ReorderIcon />
+          </button>
       </div>
-    </header>
+      <div className='links'>
+        <Link to='/'> Home </Link>
+        <Link to='/projects'> Projects </Link>
+        <Link to='/experience'> Experience </Link>
+      </div>
+    </div>
   );
 }
 
